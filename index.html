@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz App OOP</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+</head>
+<body>
+    <!-- start first mode (settings) -->
+    <section class="settings">
+        <div class="container">
+            <header class="quiz-header">
+                <i class="uil uil-setting"></i>
+                <h2>quiz settings</h2>
+            </header>
+
+            <div class="cat">
+                <div class="cat-header">
+                    <h3>choose category</h3>
+                </div>
+                <div class="cat-content">
+                    <div class="menu">
+                        <div class="item">
+                            <input type="radio" name="cat" id="pc" data-id="18">
+                            <label for="pc">
+                                <i class="uil uil-laptop"></i>
+                                <span>computer</span>
+                            </label>
+                        </div>
+                        <div class="item">
+                            <input type="radio" name="cat" id="G-knowledge" data-id="9">
+                            <label for="G-knowledge">
+                            <i class="uil uil-brain"></i>
+                            <span>general knowledge</span>
+                            </label>
+                        </div>
+                        <div class="item">
+                            <input type="radio" name="cat" id="history" data-id="23">
+                            <label for="history">
+                            <i class="uil uil-history"></i>
+                            <span>history</span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="difficulty-level">
+                <div class="level-header">
+                    <h3>choose difficulty level</h3>
+                </div>
+                <div class="level-content">
+                    <div class="input-field">
+                        <input type="radio" id="easy" name="level">
+                        <label for="easy">easy</label>
+                    </div>
+                    <div class="input-field">
+                        <input type="radio" id="medium" name="level">
+                        <label for="medium">medium</label>
+                    </div>
+                    <div class="input-field">
+                        <input type="radio" id="hard" name="level">
+                        <label for="hard">hard</label>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="nofquestions">
+                <div class="no-header">
+                    <h3>number of questions</h3>
+                </div>
+                <div class="no-content">
+                    <input type="number" id="number">
+                </div>
+            </div>
+            
+            <div class="submit">
+                <button class="start-btn" id="start-btn">
+                    <i class="uil uil-location-arrow-alt"></i>
+                    start quiz
+                    <i class="uil uil-location-arrow-alt"></i>
+                </button>
+            </div>
+        </div>
+    </section>
+    <!-- end first mode (settings) -->
+
+    <!-- start quiz area section -->
+    <section class="quiz-area">
+        <div class="container">
+        <header class="quiz-header">
+            <i class="uil uil-user-check"></i>
+            <h2>quiz questions</h2>
+        </header>
+        <div class="quiz-stats">
+            <div class="quiz-Q-num"></div>
+            <div class="quiz-time"></div>
+        </div> 
+
+        <div class="quiz-canvas">
+        </div>
+
+        <!-- start bullet container -->
+        <div class="bullet-container">
+        </div>
+        <!-- end bullet container  -->
+
+        <!-- start button to submit each answer  -->
+        <button class="submit" id="submit-btn">
+            <i class="uil uil-location-arrow-alt"></i>
+            submit question
+            <i class="uil uil-location-arrow-alt"></i>
+        </button>
+        <!-- end submit button  -->
+        </div>
+    </section>
+    <!-- end quiz area section -->
+
+    <!-- start result section  -->
+    <section class="results">
+        <div class="container">
+            <span class="close">X</span>
+            <div class="popup-result">
+                <span class="icon"><img src="" alt=""></span>
+                <span class="congrats"></span>
+                <span class="score"></span>
+                <span class="quiz-state"></span>
+                <span class="attempts">
+                    you attempt <span></span> questions and from
+                    that <span></span> answers are correct.
+                </span>
+            </div>
+        </div>
+    </section>
+    <!-- end result section  -->
+    <section class="popup-error">
+        <div class="container">
+            <span class="close-btn">X</span>
+            <div class="popup-err">
+                <span class="icon"><img src="./img/settings-error.gif" alt=""></span>
+                <ul>to start the quiz you need to make sure that: 
+                    <li>you picked a category option.</li>
+                    <li>you determined the difficulty level.</li>
+                    <li>you specified number of questions.</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <script type="module" src="./app.js"></script>
+</body>
+</html>
