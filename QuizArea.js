@@ -23,7 +23,7 @@ class Quiz {
         //call function to show data
         this.showQuestion(this.Only_One_Q , this.allAnswers ,this.current);
         //run timer function for the first Q
-        this.timer(4,amount,this.current);
+        this.timer(60,amount,this.current);
         //call function to create bullets
         this.createBullets(amount);
 
@@ -43,7 +43,7 @@ class Quiz {
 
             //clear interval and call function to set timer
             clearInterval(this.interval);
-            this.timer(4 , amount, this.current);
+            this.timer(60 , amount, this.current);
 
             //function to handle span
             this.handleSpan(this.current);
